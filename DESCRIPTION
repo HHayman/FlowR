@@ -11,13 +11,27 @@ Depends:
     survival,
     maxstat,
     gplots,
-    ggplot2
-Imports:
     ggplot2,
+    tidyverse,
+    ggpubr,
+    gridExtra,
+    plyr,
+    irr,
+    ggplotify,
+    RColorBrewer
+Imports:
     survminer,
     survival,
     maxstat,
-    gplots
+    gplots,
+    ggplot2,
+    tidyverse,
+    ggpubr,
+    gridExtra,
+    plyr,
+    irr,
+    ggplotify,
+    RColorBrewer
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
