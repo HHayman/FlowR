@@ -7,8 +7,8 @@ Maintainer: Hayman <l.hayman.1@research.gla.ac.uk>
 Description: Carries out a specified workflow, such as cutpoint generation or survival analysis.
 Depends: R (>= 4.1.1)
 Imports:
-ggplot2 (>= 3.3.5)
-survminer (>= 0.4.9)
+ggplot2 (>= 3.3.5),
+survminer (>= 0.4.9),
 gplots (>= 3.1.1)
 License: GPL (>= 3)
 Encoding: UTF-8
