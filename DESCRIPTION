@@ -5,10 +5,18 @@ Version: 0.1.0
 Author: Hayman
 Maintainer: Hayman <l.hayman.1@research.gla.ac.uk>
 Description: Carries out a specified workflow, such as cutpoint generation or survival analysis.
-Depends: R (>= 4.1.1)
+Depends: 
+    R (>= 4.1.1),
+    survminer,
+    survival,
+    maxstat,
+    gplots,
+    ggplot2
 Imports:
     ggplot2,
     survminer,
+    survival,
+    maxstat,
     gplots
 License: GPL (>= 3)
 Encoding: UTF-8
