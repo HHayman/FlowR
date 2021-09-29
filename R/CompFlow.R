@@ -158,8 +158,7 @@ CompFlow <-
           conf.level = 0.95
         )
     }
-    # ICC <- round(ICCData$value, digits = 3)
-    ICC <- ICCData$value
+    ICC <- round(ICCData$value, digits = 3)
     ICCText <- paste("ICCC = ", ICC, sep = "")
 
     if (ICC < 0.5) {
