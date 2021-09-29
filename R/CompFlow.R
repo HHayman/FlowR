@@ -114,6 +114,7 @@ CompFlow <-
     setwd("1.ConfiguredData")
 
     # Calculate difference and mean
+    DataForICC <- Data
     Data$Difference <- Data[, 1] - Data[, 2]
     Data$Mean <- (Data[, 1] + Data[, 2]) / 2
     DataDifference <- Data$Difference
@@ -150,14 +151,15 @@ CompFlow <-
         ICCType %in% ICCTypeList & ICCUnit %in% ICCUnitList) {
       ICCData <-
         icc(
-          Data,
+          DataForICC,
           model = ICCModel,
           type = ICCType,
           unit = ICCUnit,
           conf.level = 0.95
         )
     }
-    ICC <- round(ICCData$value, digits = 3)
+    # ICC <- round(ICCData$value, digits = 3)
+    ICC <- ICCData$value
     ICCText <- paste("ICCC = ", ICC, sep = "")
 
     if (ICC < 0.5) {
@@ -446,69 +448,6 @@ CompFlow <-
 
     dev.off()
     }
-
-
-    # # Horizontal Scatter plot + Bland-Altman with density
-    # if (Density == "Yes") {
-    #   FileName <-
-    #     paste("ScatterPlusBlandAltmanDensityHorizontal", ".tiff", sep = "")
-    #   tiff(
-    #     FileName,
-    #     width = 3000,
-    #     height = 1500,
-    #     units = "px",
-    #     bg = "transparent",
-    #     res = 300,
-    #     compression = "lzw"
-    #   )
-    # }
-    #
-    # grid.arrange(ScatterDensity,
-    #              BlandAltmanDensity,
-    #              ncol = 2,
-    #              nrow = 1)
-    # dev.off()
-
-
-    # # Vertical Scatter plot + Bland-Altman
-    # FileName <-
-    #   paste("ScatterPlusBlandAltmanVertical", ".tiff", sep = "")
-    # tiff(
-    #   FileName,
-    #   width = 1500,
-    #   height = 3000,
-    #   units = "px",
-    #   bg = "transparent",
-    #   res = 300,
-    #   compression = "lzw"
-    # )
-    #
-    # grid.arrange(Scatter, BlandAltman, ncol = 1, nrow = 2)
-    # dev.off()
-    #
-    # # Vertical Scatter plot + Bland-Altman with density
-    # if (Density == "Yes") {
-    #   FileName <-
-    #     paste("ScatterPlusBlandAltmanDensityVertical", ".tiff", sep = "")
-    #   tiff(
-    #     FileName,
-    #     width = 1500,
-    #     height = 3000,
-    #     units = "px",
-    #     bg = "transparent",
-    #     res = 300,
-    #     compression = "lzw"
-    #   )
-    # }
-    #
-    # grid.arrange(ScatterDensity,
-    #              BlandAltmanDensity,
-    #              ncol = 1,
-    #              nrow = 2)
-    # dev.off()
-
-
-
 
 
 
