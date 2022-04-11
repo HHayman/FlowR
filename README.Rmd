@@ -31,6 +31,7 @@ FlowR consists of a series of workflows, each representing a form of analysis. T
 You can install the released version of FlowR from [GITHUB](https://github.com/) with:
 
 ``` r
+library(devtools)
 install_github("HHayman/FlowR")
 ```
 

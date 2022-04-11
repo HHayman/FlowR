@@ -15,6 +15,7 @@ You can install the released version of FlowR from
 [GITHUB](https://github.com/) with:
 
 ``` r
+library(devtools)
 install_github("HHayman/FlowR")
 ```
 
@@ -57,8 +58,7 @@ To run CutFlow, simply fill in the blanks, as in the example below;
     -   This cutpoint is then applied to all datasets within the
         subdirectory
 -   CutPointStatus is the status variable to be used (such as CSS)
--   CutPointTime is the time variable to be used (such as
-    Survival\_2021)
+-   CutPointTime is the time variable to be used (such as Survival_2021)
 -   minprop is the minimum proportion of cases to be include either side
     of the cutpoint
     -   Default is 0.1, exclude the argument if you don’t want to change
@@ -90,7 +90,7 @@ CutFlow(Subdirectory = "YourSubdirectory", TrainingData = "TrainingDataset",
 
 A new folder will be created in your R directory;
 
--   Folder name format is CutFlow\_SystemData\_Number
+-   Folder name format is CutFlow_SystemData_Number
 -   Three folders are contained within;
     -   0 - A copy of all datafiles fed into CutFlow, for record keeping
     -   1 - A copy of all cutpoint data, including a pdf list of
@@ -195,7 +195,7 @@ SurvFlow(
 
 A new folder will be created in your R directory;
 
--   Folder name format is SurvFlow\_Filename\_SystemData\_Number
+-   Folder name format is SurvFlow_Filename_SystemData_Number
 -   Inside is a folder per SurvFlow module, for example BaseSurv
     -   At the next level is a folder per survival status/time pair,
         containing the survival plots
@@ -249,7 +249,7 @@ CompFlow(Data, ICCModel = "twoway", ICCType = "agreement", ICCUnit = "single", D
 
 A new folder will be created in your R directory;
 
--   Folder name format is CompFlow\_SystemData\_Number
+-   Folder name format is CompFlow_SystemData_Number
 -   Inside are three folders
     -   0.OriginalData contains your input file for record keeping
     -   1.ConfiguredData contains records of data configurations for
